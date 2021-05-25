@@ -25,7 +25,6 @@ group :development do
   gem "rack-mini-profiler", "~> 2.0"
   gem "spring"
   # ===== App specific gems =======================
-  gem "rails-controller-testing"
   gem "minitest-reporters", "1.3.8"
   gem "guard", "2.16.2"
   gem "guard-minitest", "2.4.6"
@@ -38,6 +37,8 @@ group :test do
   gem "capybara", ">= 3.26"
   gem "selenium-webdriver"
   gem "webdrivers"
+  # ===== App specific gems =======================
+  gem "rails-controller-testing"
 end
 
 group :production do
