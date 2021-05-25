@@ -8,6 +8,15 @@ class UsersController < ApplicationController
     @user = User.new
   end
 
+  def create
+    @user = User.new(user_params)
+    if @user.save
+      # handle successful save
+    else
+      render :new
+    end
+  end
+
   private
 
   def set_user
