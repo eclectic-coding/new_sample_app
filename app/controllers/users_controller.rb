@@ -25,12 +25,12 @@ class UsersController < ApplicationController
   end
 
   def update
-    respond_to do |format|
-      if @user.update(user_params)
-        format.html { redirect_to root_url, notice: "Your profile has been updated." }
-      else
-        format.html { render :edit }
-      end
+
+    if @user.update(user_params)
+      flash[:success] = "Profile updated"
+      redirect_to @user
+    else
+      render :edit
     end
 
   end
