@@ -1,5 +1,4 @@
 module SessionsHelper
-
   def log_in(user)
     session[:user_id] = user.id
     # Guard against session replay attacks.
@@ -28,6 +27,10 @@ module SessionsHelper
     end
   end
 
+  def current_user?(user)
+    user && user == current_user
+  end
+
   def logged_in?
     !current_user.nil?
   end
@@ -43,5 +46,4 @@ module SessionsHelper
     cookies.delete(:user_id)
     cookies.delete(:remember_token)
   end
-
 end
