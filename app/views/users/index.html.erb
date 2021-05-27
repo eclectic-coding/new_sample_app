@@ -4,12 +4,7 @@
 <%== pagy_bootstrap_nav(@pagy) %>
 
 <ul class="list-unstyled m-0 mb-3">
-  <% @users.each do |user| %>
-    <li class="overflow-auto py-3 border-bottom">
-      <%= gravatar_for user, size: 50 %>
-      <%= link_to user.name, user %>
-    </li>
-  <% end %>
+  <%= render @users %>
 </ul>
 
 <div>
