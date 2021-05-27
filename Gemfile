@@ -18,6 +18,7 @@ group :development, :test do
   gem "sqlite3", "~> 1.4"
   # ===== App specific gems =======================
   gem "standardrb", "~> 1.0"
+  gem "faker"
 end
 
 group :development do
